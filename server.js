@@ -16,8 +16,10 @@ server.use('/posts/', postRouter);
 
 console.log('get this far?');
 
+const messageOfTheDay = process.env.MOTD;
+
 server.get('/', (req, res) => {
-  res.send(`<h2>node api four</h2>`);
+  res.send(`<h2>node api four ${messageOfTheDay}</h2>`);
 });
 
 // server.get('/:id', validateUserId, (req, res) => {
