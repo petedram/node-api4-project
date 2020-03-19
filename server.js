@@ -14,8 +14,10 @@ server.use(express.json());
 // server.use(validateUserId);
 server.use('/posts/', postRouter);
 
+console.log('get this far?');
+
 server.get('/', (req, res) => {
-  res.send(`<h2>Let's write some middleware!</h2>`);
+  res.send(`<h2>node api four</h2>`);
 });
 
 // server.get('/:id', validateUserId, (req, res) => {
